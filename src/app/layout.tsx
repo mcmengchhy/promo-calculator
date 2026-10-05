@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     description: 'Boost your focus and productivity with customizable Pomodoro sessions.',
     type: 'website',
   },
+  verification: {
+    google: 'googlef44a921bf8a2345b',
+  },
 };
 
 export default function RootLayout({
