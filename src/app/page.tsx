@@ -14,10 +14,10 @@ export default function HomePage() {
     <div className="flex flex-col items-center">
       
       {/* Top Banner / Ad Placement */}
-      <AdBanner className="max-w-2xl w-full" slot="7788990011" />
+      <AdBanner className="max-w-2xl w-full my-2" slot="7788990011" />
 
       {/* Main Timer Section */}
-      <div className="w-full glass-panel p-6 sm:p-10 rounded-3xl border border-white/10 shadow-2xl my-4 backdrop-blur-xl">
+      <div className="w-full glass-panel p-4 sm:p-6 lg:p-8 rounded-3xl border border-white/10 shadow-2xl my-2 backdrop-blur-xl">
         <TimerDisplay />
         <TaskInput />
         <TimerControls />
@@ -28,15 +28,15 @@ export default function HomePage() {
       <DonateBanner />
 
       {/* Ad Banner Middle Placement */}
-      <AdBanner className="max-w-2xl w-full" slot="8899001122" />
+      <AdBanner className="max-w-2xl w-full my-4" slot="8899001122" />
 
-      {/* SEO & Educational Guide Section (Crucial for Google AdSense content quality verification) */}
-      <section className="w-full max-w-4xl mx-auto my-12 glass-panel p-8 sm:p-10 rounded-3xl border border-white/10 text-slate-300 leading-relaxed">
+      {/* SEO & Educational Guide Section */}
+      <section className="w-full max-w-4xl mx-auto my-8 sm:my-12 glass-panel p-6 sm:p-10 rounded-3xl border border-white/10 text-slate-300 leading-relaxed">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-10 rounded-xl bg-rose-500/20 border border-rose-500/30 flex items-center justify-center">
             <Brain className="w-5 h-5 text-rose-400" />
           </div>
-          <h2 className="text-2xl font-bold text-slate-100">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-100">
             How to Master Your Time with the Pomodoro Technique
           </h2>
         </div>
@@ -45,9 +45,9 @@ export default function HomePage() {
           The <strong className="text-white">Pomodoro Technique</strong> is a proven time-management method developed by Francesco Cirillo in the late 1980s. It breaks your work day into 25-minute focused work intervals separated by 5-minute short breaks. This structured cycle builds mental stamina, minimizes burnout, and prevents cognitive fatigue.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-          <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
-            <h3 className="font-semibold text-slate-100 flex items-center gap-2 mb-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 my-6 sm:my-8">
+          <div className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h3 className="font-semibold text-slate-100 flex items-center gap-2 mb-2 text-sm sm:text-base">
               <Zap className="w-4 h-4 text-amber-400" />
               1. Choose a Single Task
             </h3>
@@ -56,8 +56,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
-            <h3 className="font-semibold text-slate-100 flex items-center gap-2 mb-2">
+          <div className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h3 className="font-semibold text-slate-100 flex items-center gap-2 mb-2 text-sm sm:text-base">
               <Sparkles className="w-4 h-4 text-rose-400" />
               2. Work Uninterrupted for 25 Mins
             </h3>
@@ -66,8 +66,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
-            <h3 className="font-semibold text-slate-100 flex items-center gap-2 mb-2">
+          <div className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h3 className="font-semibold text-slate-100 flex items-center gap-2 mb-2 text-sm sm:text-base">
               <CheckCircle className="w-4 h-4 text-emerald-400" />
               3. Take a 5-Minute Short Break
             </h3>
@@ -76,8 +76,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
-            <h3 className="font-semibold text-slate-100 flex items-center gap-2 mb-2">
+          <div className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h3 className="font-semibold text-slate-100 flex items-center gap-2 mb-2 text-sm sm:text-base">
               <Brain className="w-4 h-4 text-blue-400" />
               4. Repeat & Take a Long Break
             </h3>
@@ -88,7 +88,7 @@ export default function HomePage() {
         </div>
 
         <div className="border-t border-white/10 pt-6">
-          <h3 className="font-bold text-slate-200 mb-3">Why Use PomoFocus?</h3>
+          <h3 className="font-bold text-slate-200 mb-3 text-sm sm:text-base">Why Use PomoFocus?</h3>
           <ul className="list-disc list-inside space-y-2 text-xs sm:text-sm text-slate-400">
             <li><strong className="text-slate-200">Tab-Accurate Engine:</strong> High precision timestamp calculations ensure your timer never slows down when running in background tabs.</li>
             <li><strong className="text-slate-200">Zero Downloads Required:</strong> Works 100% in your browser on desktop, tablet, and mobile devices.</li>
@@ -98,7 +98,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer Ad Placement */}
-      <AdBanner className="max-w-2xl w-full" slot="9900112233" />
+      <AdBanner className="max-w-2xl w-full my-4" slot="9900112233" />
 
     </div>
   );
