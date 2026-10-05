@@ -1,0 +1,211 @@
+========================================================
+POMODORO TIMER WEBSITE - PROJECT PLAN (NEXT.JS)
+========================================================
+Goal          : Free Pomodoro Timer website
+Monetization  : Google AdSense + Donations
+Stack         : Next.js 15 + Tailwind CSS + Vercel
+========================================================
+
+
+1. PROJECT GOAL
+--------------------------------------------------------
+Create a clean, fast, and useful Pomodoro Timer website.
+Primary income sources:
+- Display Ads (Google AdSense)
+- Donations (Ko-fi / Buy Me a Coffee / Stripe)
+
+The website should be simple to use, fast to load, and easy to maintain.
+
+
+2. TARGET USER
+--------------------------------------------------------
+- Students
+- Remote workers
+- Freelancers
+- Anyone who wants to improve focus
+
+
+3. CORE FEATURES (MVP)
+--------------------------------------------------------
+Timer Features:
+- 25 min Focus / 5 min Short Break / 15 min Long Break
+- Start, Pause, Reset
+- Custom time settings
+- Circular progress indicator
+- Sound notification when finished
+- Browser tab title shows remaining time
+- Session counter (pomodoros completed today)
+
+Extra Features:
+- Dark Mode / Light Mode
+- Keyboard shortcut (Space = Start/Pause)
+- Simple daily statistics (total focus time today)
+
+
+4. PAGE STRUCTURE
+--------------------------------------------------------
+1. Home (/)
+   - Main Timer
+   - Controls
+   - Ad placement
+   - Donation button
+
+2. Settings (/settings)
+   - Change timer durations
+   - Sound on/off
+   - Theme preference
+
+3. About (/about)
+   - What is Pomodoro Technique
+   - Why this tool was created
+
+4. Support (/support)
+   - Donation options
+   - Message to support the project
+
+5. Privacy Policy (/privacy)
+   - Required for Google AdSense
+
+6. Terms of Use (/terms)
+   - Basic terms
+
+
+5. MONETIZATION PLAN
+--------------------------------------------------------
+A. Google AdSense
+   Recommended placements:
+   - Below the timer
+   - Sidebar (desktop only)
+   - Footer
+   - After session completed screen
+
+   Rules:
+   - Never cover the timer
+   - Never use pop-up or auto-play video ads
+   - Keep good user experience
+
+B. Donations
+   Platforms:
+   - Ko-fi (easiest)
+   - Buy Me a Coffee
+   - Stripe Payment Link
+
+   Placement:
+   - Near the timer (subtle)
+   - After finishing a session (best conversion)
+   - Footer
+   - Dedicated Support page
+
+
+6. PROJECT STRUCTURE
+--------------------------------------------------------
+pomodoro-timer/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx                 → Main Timer page
+│   ├── settings/
+│   │   └── page.tsx
+│   ├── about/
+│   │   └── page.tsx
+│   ├── support/
+│   │   └── page.tsx
+│   ├── privacy/
+│   │   └── page.tsx
+│   └── terms/
+│       └── page.tsx
+│
+├── components/
+│   ├── Timer/
+│   │   ├── TimerDisplay.tsx
+│   │   ├── TimerControls.tsx
+│   │   └── ProgressCircle.tsx
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   ├── ads/
+│   │   └── AdBanner.tsx
+│   ├── donation/
+│   │   └── DonateButton.tsx
+│   └── ui/
+│       └── ThemeToggle.tsx
+│
+├── hooks/
+│   └── usePomodoro.ts
+│
+├── lib/
+│   └── utils.ts
+│
+├── public/
+│   └── sounds/
+│       └── alarm.mp3
+│
+└── styles/
+    └── globals.css
+
+
+7. DEVELOPMENT PHASES
+--------------------------------------------------------
+Phase 1: Project Setup (Day 1)
+- Create Next.js project
+- Setup Tailwind CSS
+- Create basic layout (Header + Footer)
+- Deploy empty project to Vercel
+
+Phase 2: Core Timer (Day 2–3)
+- Build timer logic
+- Start / Pause / Reset functionality
+- Progress circle
+- Sound notification
+- Tab title update
+
+Phase 3: Additional Features (Day 4–5)
+- Dark / Light mode
+- Settings page
+- Session counter
+- Responsive design (mobile friendly)
+
+Phase 4: Monetization Setup (Day 6–7)
+- Add AdSense ad placeholders
+- Add donation buttons
+- Create Privacy Policy & Terms pages
+- Prepare site for AdSense application
+
+Phase 5: Polish & Launch (Day 8–10)
+- SEO setup (title, description, sitemap)
+- Performance optimization
+- Final testing on mobile & desktop
+- Soft launch
+
+
+8. SEO BASIC REQUIREMENTS
+--------------------------------------------------------
+- Clear page title
+- Meta description
+- Open Graph tags
+- sitemap.xml
+- robots.txt
+- Fast loading speed (very important for ranking and ads)
+
+
+9. FUTURE FEATURES (After MVP)
+--------------------------------------------------------
+- Task list integration
+- Focus music / ambient sounds
+- Weekly & monthly statistics
+- Multiple custom presets
+- PWA (installable on phone)
+- Browser extension version
+
+
+10. SUCCESS METRICS
+--------------------------------------------------------
+- Daily active users
+- Average time on site
+- Ad impressions & revenue
+- Donation conversion rate
+- Returning visitors percentage
+
+
+========================================================
+END OF PLAN
+========================================================
