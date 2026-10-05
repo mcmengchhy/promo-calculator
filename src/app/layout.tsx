@@ -33,6 +33,35 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark" data-mode="pomodoro">
       <head>
+        {/* Google Structured Data / JSON-LD for Rich Search Snippets */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebApplication',
+              name: 'PomoFocus',
+              url: 'https://promo-calculator-three.vercel.app',
+              applicationCategory: 'Productivity',
+              operatingSystem: 'All',
+              description:
+                'Free online Pomodoro timer with customizable focus cycles, background accuracy, Tibetan bell sound alerts, and dark mode.',
+              offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'USD',
+              },
+              featureList: [
+                'Pomodoro 25 min work timer',
+                'Short break 5 min timer',
+                'Long break 15 min timer',
+                'Web Audio sound alerts',
+                'Tab accurate background timing',
+              ],
+            }),
+          }}
+        />
+
         {/* Google AdSense Script Placeholder */}
         {process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID && (
           <script
