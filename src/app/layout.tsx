@@ -36,6 +36,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark" data-mode="pomodoro">
       <head>
+        {/* Google Site Verification Meta Tag */}
+        <meta name="google-site-verification" content="googlef44a921bf8a2345b" />
+
         {/* Google Structured Data / JSON-LD for Rich Search Snippets */}
         <script
           type="application/ld+json"
