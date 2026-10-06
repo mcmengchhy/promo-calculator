@@ -4,7 +4,10 @@ import { PomodoroProvider } from '@/context/PomodoroContext';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://promo-calculator-three.vercel.app';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'PomoFocus - Free Online Pomodoro Timer & Productivity Tool',
   description:
     'Boost your productivity and focus with PomoFocus, a free online Pomodoro timer with customizable intervals, sound alerts, statistics, and dark mode.',
@@ -16,12 +19,23 @@ export const metadata: Metadata = {
     'Work Rest Cycle',
     'Time Management',
     'Free Online Timer',
+    'PomoFocus',
   ],
   authors: [{ name: 'PomoFocus Team' }],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'PomoFocus - Free Online Pomodoro Timer',
     description: 'Boost your focus and productivity with customizable Pomodoro sessions.',
+    url: SITE_URL,
+    siteName: 'PomoFocus',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PomoFocus - Free Online Pomodoro Timer',
+    description: 'Boost your focus and productivity with customizable Pomodoro sessions.',
   },
   verification: {
     google: 'googlef44a921bf8a2345b',
@@ -33,11 +47,35 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
   return (
     <html lang="en" data-theme="dark" data-mode="pomodoro">
       <head>
         {/* Google Site Verification Meta Tag */}
         <meta name="google-site-verification" content="googlef44a921bf8a2345b" />
+
+        {/* Google Analytics 4 (GA4) Tag */}
+        {gaMeasurementId && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gaMeasurementId}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
 
         {/* Google Structured Data / JSON-LD for Rich Search Snippets */}
         <script
@@ -47,7 +85,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'WebApplication',
               name: 'PomoFocus',
-              url: 'https://promo-calculator-three.vercel.app',
+              url: SITE_URL,
               applicationCategory: 'Productivity',
               operatingSystem: 'All',
               description:
